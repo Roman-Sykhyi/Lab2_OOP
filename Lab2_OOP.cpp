@@ -23,6 +23,12 @@ public:
 	{
 		SetString(str);
 	}
+
+	CharSet(const CharSet& charset)
+	{
+		SetString(charset.str);
+	}
+	
 	~CharSet() 
 	{
 		delete[] str;
@@ -70,7 +76,7 @@ int main()
 		cout << "Рядки відрізняються" << endl;
 	}
 
-	if (charSet.IsGreaterThan("Привіт світ!"))
+	if (charSet.IsGreaterThan("Привіт"))
 	{
 		cout << "Перший рядок більший за другий" << endl;
 	}
